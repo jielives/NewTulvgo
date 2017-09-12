@@ -1,4 +1,4 @@
-package com.yg.tulvgo.ui;
+package com.yg.tulvgo.ui.fragment;
 
 /**
  * Created by shenjie on 2017/9/12.

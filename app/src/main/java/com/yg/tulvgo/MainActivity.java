@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     public LinearLayout mainBottomeSwitcherContainer;
     private HomeFragment homeFragment ;
     private DestinationFragment destinationFragment ;
-    //    private HotFragment hotFragment;
     private OrderFragment orderFragment ;
     private MeFragment userFragment ;
     android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();

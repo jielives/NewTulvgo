@@ -8,4 +8,8 @@
     <color name="color_9999">#999999</color>
     <color name="color_ffb15a">#ffb15a</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_333">#333333</color>
+    <color name="color_ffff">#ffffff</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="color_6666">#666666</color>
 </resources>

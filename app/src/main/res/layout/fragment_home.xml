@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.yg.tulvgo.ui.activity.LoginActivity">
 
-    <TextView
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yg.tulvgo.view.VRefreshLayout
+        android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="首页"
-        android:gravity="center"
-        />
-</LinearLayout>
+        android:layout_height="wrap_content">
+        <com.yg.tulvgo.gallery.CustomRecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            >
+        </com.yg.tulvgo.gallery.CustomRecyclerView>
+    </com.yg.tulvgo.view.VRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/head_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:id="@+id/heard"
+            android:background="@color/color_ffff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/home_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_36px"
+            android:layout_marginRight="@dimen/margin_36px"
+            android:layout_marginLeft="@dimen/margin_36px"
+            android:background="@drawable/shap_roundedrectangle3"
+            android:layout_height="35dp">
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_36px"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/search_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="出去玩，找土驴"
+                android:gravity="center"
+                android:background="@color/color_f7f7f7"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -13,4 +13,16 @@
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@drawable/line</item>
     </style>
+    <!--间距-->
+    <style name="view1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/color_f7f7f7</item>
+    </style>
+
+    <style name="SmallGreyTextView">
+        <item name="android:textColor">@color/color_ffb15a</item>
+        <item name="android:textSize">@dimen/text_size_28px</item>
+    </style>
+
 </resources>

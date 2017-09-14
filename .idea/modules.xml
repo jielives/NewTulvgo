@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NewTulvgo.iml" filepath="$PROJECT_DIR$/NewTulvgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StatusBar/StatusBar.iml" filepath="$PROJECT_DIR$/StatusBar/StatusBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

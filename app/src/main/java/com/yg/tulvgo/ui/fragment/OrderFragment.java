@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yg.tulvgo.BaseFragment;
 import com.yg.tulvgo.R;
 
 /**
@@ -14,12 +15,10 @@ import com.yg.tulvgo.R;
  * 订单
  */
 
-public class OrderFragment extends Fragment {
+public class OrderFragment extends BaseFragment {
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_order,null);
-        return  view ;
+    protected int setLayoutResouceId() {
+        return R.layout.fragment_order;
     }
 }

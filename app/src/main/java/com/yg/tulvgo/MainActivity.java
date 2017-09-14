@@ -78,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
             case 3 :
                 if(userFragment == null ) {
                     userFragment = new MeFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("str","这是MainActivity传来的值~");
+                    userFragment.setArguments(bundle);
                     transaction.add(R.id.main_fragment_container,userFragment,"userFragmentTag");
                     hideFragment(transaction);
                     transaction.show(userFragment);

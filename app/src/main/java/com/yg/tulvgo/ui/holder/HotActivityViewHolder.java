@@ -16,7 +16,6 @@ import java.util.List;
 
 /**
  * Created by admin on 2017/6/29.
- *
  * 热门活动
  */
 
@@ -30,7 +29,6 @@ public class HotActivityViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         rlMgallery = (SpeedRecyclerView) itemView.findViewById(R.id.gallery_recyclerview);
         point = (TextView) itemView.findViewById(R.id.point);
-
         sumPoint = (TextView) itemView.findViewById(R.id.sum_point);
         initdata();
         initViewHotActivity();

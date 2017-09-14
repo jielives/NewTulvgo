@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.yg.tulvgo.BaseFragment;
 import com.yg.tulvgo.R;
 
 /**
@@ -14,13 +16,18 @@ import com.yg.tulvgo.R;
  * 个人中心
  */
 
-public class MeFragment extends Fragment {
+public class MeFragment extends BaseFragment {
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_me,null);
+    protected void initData(Bundle arguments) {
+        String str = (String) arguments.get("str");
+        Toast.makeText(mContext,str,Toast.LENGTH_SHORT).show();
+        super.initData(arguments);
+    }
 
-        return view;
+    @Override
+    protected int setLayoutResouceId() {
+        return R.layout.fragment_me;
     }
 }

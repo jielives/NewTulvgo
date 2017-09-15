@@ -1,5 +1,6 @@
 package com.yg.tulvgo.ui.holder;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -32,7 +33,7 @@ class HeadHolder extends RecyclerView.ViewHolder {
     TextView hotel;
     TextView nc_near;
     TextView line_recommend;
-    private MainActivity mainActivity;
+    private Activity mainActivity;
     private MyAdapter adapter;//轮播图适配器
     private List<ImageView> imageViewList = new ArrayList<>();//轮播图图片集合;
     int image[] = {
@@ -41,7 +42,7 @@ class HeadHolder extends RecyclerView.ViewHolder {
             R.drawable.a
     };
 
-    public HeadHolder(View itemView, MainActivity mainActivity) {
+    public HeadHolder(View itemView, Activity mainActivity) {
         super(itemView);
         ButterKnife.bind(mainActivity);
         this.mainActivity = mainActivity;

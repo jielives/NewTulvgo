@@ -3,12 +3,14 @@ package com.yg.tulvgo;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 
+import com.yg.common.base.BaseApplication;
 import com.yg.tulvgo.ui.fragment.DestinationFragment;
 import com.yg.tulvgo.ui.fragment.HomeFragment;
 import com.yg.tulvgo.ui.fragment.MeFragment;
@@ -16,6 +18,7 @@ import com.yg.tulvgo.ui.fragment.OrderFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import jameson.io.library.util.ToastUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private DestinationFragment destinationFragment ;
     private OrderFragment orderFragment ;
     private MeFragment userFragment ;
+    private long exitTime = 0;
     android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
     public View.OnClickListener onClickListener =
@@ -190,4 +194,20 @@ public class MainActivity extends AppCompatActivity {
 //            userFragment = (MeFragment) fragment;
         }
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+            //两秒之内按返回键就会退出
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                ToastUtils.show(MainActivity.this,"再按一次退出");
+                exitTime = System.currentTimeMillis();
+            } else {
+                BaseApplication.getIns().exitApp(this);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 }

@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import com.yg.tulvgo.MyApplication;
 import com.yg.tulvgo.R;
-import com.yg.tulvgo.gallery.CardScaleHelper;
-import com.yg.tulvgo.gallery.SpeedRecyclerView;
+import com.yg.common.gallery.CardScaleHelper;
+import com.yg.common.gallery.SpeedRecyclerView;
 import com.yg.tulvgo.ui.adapter.BestLineAdapter;
 
 import java.util.ArrayList;

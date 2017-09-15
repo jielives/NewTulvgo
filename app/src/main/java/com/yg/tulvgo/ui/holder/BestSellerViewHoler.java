@@ -5,8 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.yg.tulvgo.R;
-import com.yg.tulvgo.gallery.SpeedRecyclerView;
-import com.yg.tulvgo.view.MultiShapeView;
+import com.yg.common.gallery.SpeedRecyclerView;
 
 /**
  * Created by admin on 2017/6/29.

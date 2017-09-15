@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yg.tulvgo.BaseFragment;
+import com.yg.common.base.BaseFragment;
 import com.yg.tulvgo.R;
 
 /**
@@ -15,7 +15,7 @@ import com.yg.tulvgo.R;
  * 目的地
  */
 
-public class DestinationFragment extends BaseFragment{
+public class DestinationFragment extends BaseFragment {
 
     @Override
     protected int setLayoutResouceId() {

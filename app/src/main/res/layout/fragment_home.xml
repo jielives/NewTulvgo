@@ -10,13 +10,13 @@
         android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.yg.tulvgo.gallery.CustomRecyclerView
+        <com.yg.common.gallery.CustomRecyclerView
             android:id="@+id/swipe_target"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:overScrollMode="never"
             >
-        </com.yg.tulvgo.gallery.CustomRecyclerView>
+        </com.yg.common.gallery.CustomRecyclerView>
     </com.yg.tulvgo.view.VRefreshLayout>
     <RelativeLayout
         android:id="@+id/head_title"

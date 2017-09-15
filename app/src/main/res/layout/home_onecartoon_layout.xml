@@ -43,7 +43,7 @@
                 />
         </LinearLayout>
     </RelativeLayout>
-    <com.yg.tulvgo.gallery.SpeedRecyclerView
+    <com.yg.common.gallery.SpeedRecyclerView
         android:layout_below="@id/tv"
         android:id="@+id/onecartoon_recyclerview"
         android:layout_width="match_parent"

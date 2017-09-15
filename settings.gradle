@@ -1,1 +1,1 @@
-include ':app', ':StatusBar'
+include ':app', ':lib_common'

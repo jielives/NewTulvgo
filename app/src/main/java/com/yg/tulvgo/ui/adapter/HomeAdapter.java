@@ -1,5 +1,6 @@
 package com.yg.tulvgo.ui.adapter;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,9 +27,9 @@ public class HomeAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private final int TYPE_BESTLINE = 3;//最佳线路
     private final int TYPE_BESTSELLER = 4;//当季热卖
     private final int TYPE_FOOTER = 5;//脚布局
-    private MainActivity mainActivity;
+    private Activity mainActivity;
 
-    public HomeAdapter(MainActivity mainActivity) {
+    public HomeAdapter(Activity mainActivity) {
         this.mainActivity = mainActivity;
     }
     @Override

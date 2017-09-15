@@ -9,8 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yg.tulvgo.R;
-import com.yg.tulvgo.gallery.CardAdapterHelper;
-import com.yg.tulvgo.view.MultiShapeView;
+import com.yg.common.gallery.CardAdapterHelper;
 
 import java.util.ArrayList;
 import java.util.List;

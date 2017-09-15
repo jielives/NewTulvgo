@@ -1,42 +1,31 @@
 package com.yg.tulvgo.ui.fragment;
 
 import android.animation.ArgbEvaluator;
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.yg.tulvgo.BaseFragment;
-import com.yg.tulvgo.MainActivity;
+import com.yg.common.base.BaseFragment;
+import com.yg.common.statusbar.StatusBarCompat;
 import com.yg.tulvgo.MyApplication;
 import com.yg.tulvgo.R;
-import com.yg.tulvgo.gallery.CustomRecyclerView;
+import com.yg.common.gallery.CustomRecyclerView;
 import com.yg.tulvgo.ui.adapter.HomeAdapter;
 import com.yg.tulvgo.view.DefaultHeaderView;
 import com.yg.tulvgo.view.VRefreshLayout;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by shenjie on 2017/9/12.
  * 首页
  */
 
-public class HomeFragment extends BaseFragment{
+public class HomeFragment extends BaseFragment {
     @BindView(R.id.refresh_layout)
     VRefreshLayout mRefreshLayout;
     @BindView(R.id.head_title)

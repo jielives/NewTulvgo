@@ -16,9 +16,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
     }
 }
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -30,5 +34,8 @@ dependencies {
     //    butterknife
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
-
+    //极光推送
+    compile files('libs/jcore-android-1.1.6.jar')
+    compile files('libs/jmessage-android_v2.2.1.jar')
+    compile files('libs/jpush-android-3.0.8.jar')
 }

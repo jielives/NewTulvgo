@@ -1,4 +1,4 @@
-package com.yg.common.utils;
+package com.yg.common.security;
 
 import java.security.MessageDigest;
 

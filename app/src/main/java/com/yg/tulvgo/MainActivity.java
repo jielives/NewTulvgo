@@ -135,10 +135,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    /*
-* 将每个item中的所有控件状态一同改变
-* 由于我们要处理通用的代码，那么item可能会有很多层，所以需要使用递归
-* */
+    /**
+        * 将每个item中的所有控件状态一同改变
+        * 由于我们要处理通用的代码，那么item可能会有很多层，所以需要使用递归
+        * */
     private void setEnable(View item, boolean b) {
         item.setEnabled(b);//核心
         if(item instanceof ViewGroup) {//处理递归的
@@ -195,19 +195,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
-            //两秒之内按返回键就会退出
-            if ((System.currentTimeMillis() - exitTime) > 2000) {
-                ToastUtils.show(MainActivity.this,"再按一次退出");
-                exitTime = System.currentTimeMillis();
-            } else {
-                BaseApplication.getIns().exitApp(this);
-            }
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+//            //两秒之内按返回键就会退出
+//            if ((System.currentTimeMillis() - exitTime) > 2000) {
+//                ToastUtils.show(MainActivity.this,"再按一次退出");
+//                exitTime = System.currentTimeMillis();
+//            } else {
+//                BaseApplication.getIns().exitApp(this);
+//            }
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
 }

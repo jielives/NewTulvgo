@@ -6,6 +6,6 @@
     <string name="begin_refresh">即将刷新</string>
     <string name="refreshing">刷新中</string>
     <string name="refresh_complete">刷新完成</string>
-    <string name="cancel_refresh" >取消刷新</string>
+    <string name="cancel_refresh">取消刷新</string>
 
 </resources>

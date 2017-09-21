@@ -8,11 +8,15 @@ import com.yg.common.network.rx.RxManager;
 import com.yg.common.utils.TUtil;
 import com.yg.common.widget.LoadingDialog;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * Created by shenjie on 2017/9/14.
  */
 
 public abstract class BaseActivity<T extends BasePresenter,E extends BaseModel> extends AppCompatActivity {
+    protected Unbinder mUnbinder;
     public T mPresenter;
     public E mModel;
     public Context mContext;
@@ -25,6 +29,7 @@ public abstract class BaseActivity<T extends BasePresenter,E extends BaseModel> 
         isConfigChange = false;
         mRxManager = new RxManager();
         setContentView(setLayoutResouceId());
+        mUnbinder = ButterKnife.bind(this);
         mContext = this;
         mPresenter = TUtil.getT(this,0);
         mModel = TUtil.getT(this,1);
@@ -64,6 +69,9 @@ public abstract class BaseActivity<T extends BasePresenter,E extends BaseModel> 
         }
         if(mRxManager!=null){
             mRxManager.clear();
+        }
+        if(mUnbinder != Unbinder.EMPTY){
+            mUnbinder.unbind();
         }
     }
 }

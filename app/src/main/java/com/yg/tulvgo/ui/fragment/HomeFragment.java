@@ -1,6 +1,7 @@
 package com.yg.tulvgo.ui.fragment;
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import com.yg.common.statusbar.StatusBarCompat;
 import com.yg.tulvgo.MyApplication;
 import com.yg.tulvgo.R;
 import com.yg.common.gallery.CustomRecyclerView;
+import com.yg.tulvgo.ui.activity.ProductListActivity;
 import com.yg.tulvgo.ui.adapter.HomeAdapter;
 import com.yg.tulvgo.view.DefaultHeaderView;
 import com.yg.tulvgo.view.VRefreshLayout;
@@ -104,8 +106,8 @@ public class HomeFragment extends BaseFragment {
 
     @OnClick(R.id.search_info)
     public void onClick() {
-//        Intent i = new Intent(MyApplication.getContext(), SearchActivity.class);
-//        startActivity(i);
+        Intent i = new Intent(MyApplication.getContext(), ProductListActivity.class);
+        startActivity(i);
     }
     @Override
     public void onResume() {

@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yg.tulvgo.ui.activity.LoginActivity">
-
-    <TextView
+    android:background="@color/gray">
+    <RelativeLayout
+        android:background="@color/color_ffff"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="订单"
-        android:gravity="center"
-        />
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单列表"
+
+            />
+    </RelativeLayout>
+    <View
+        style="@style/view"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/color_6666"
+            android:background="@color/color_ffff"
+            app:tabIndicatorColor="@color/color_ffb15a"
+            app:tabSelectedTextColor="@color/color_ffb15a"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabPaddingStart="9dp"
+            >
+        </android.support.design.widget.TabLayout>
+        <View
+            style="@style/view"></View>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
 </LinearLayout>

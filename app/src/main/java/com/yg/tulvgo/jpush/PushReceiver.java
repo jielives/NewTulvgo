@@ -6,6 +6,7 @@ import android.content.Intent;
 
 /**
  * Created by shenjie on 2017/9/19.
+ * 推送自定义广播接收者
  */
 
 public class PushReceiver extends BroadcastReceiver{

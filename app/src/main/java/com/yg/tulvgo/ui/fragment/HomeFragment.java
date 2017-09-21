@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ import butterknife.OnClick;
  */
 
 public class HomeFragment extends BaseFragment {
+    @BindView(R.id.scan)
+    ImageView mScan;
     @BindView(R.id.refresh_layout)
     VRefreshLayout mRefreshLayout;
     @BindView(R.id.head_title)
@@ -63,7 +66,9 @@ public class HomeFragment extends BaseFragment {
             }else if(sumY>200){
                 f = 1.0f;
                 heard.setAlpha(100%100);
+                mScan.setImageResource(R.drawable.scan_disabled);
             }else{
+                mScan.setImageResource(R.drawable.scan_normal);
                 f = sumY / duration;
                 heard.setAlpha(sumY / duration);
             }

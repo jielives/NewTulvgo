@@ -36,19 +36,10 @@
             android:id="@+id/home_title"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/margin_36px"
-            android:layout_marginRight="@dimen/margin_36px"
-            android:layout_marginLeft="@dimen/margin_36px"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
             android:background="@drawable/shap_roundedrectangle3"
             android:layout_height="35dp">
-            <ImageView
-                android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_36px"
-                android:layout_gravity="center_vertical"
-                android:background="@android:color/transparent"
-                android:layout_centerVertical="true"
-                android:src="@drawable/search" />
             <TextView
                 android:layout_centerInParent="true"
                 android:id="@+id/search_info"
@@ -58,6 +49,24 @@
                 android:gravity="center"
                 android:background="@color/color_f7f7f7"
                 />
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_36px"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search" />
         </RelativeLayout>
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/scan_normal"
+            />
     </RelativeLayout>
 </RelativeLayout>

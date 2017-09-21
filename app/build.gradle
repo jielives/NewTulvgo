@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 android {
+    signingConfigs {
+        release {
+            keyAlias 'tulvgo'
+            keyPassword 'tulvgo'
+            storeFile file('D:/tulvgosfp/tulvgo.jks')
+            storePassword 'tulvgo'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
@@ -15,6 +23,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
         sourceSets {
             main {
@@ -38,4 +52,6 @@ dependencies {
     compile files('libs/jcore-android-1.1.6.jar')
     compile files('libs/jmessage-android_v2.2.1.jar')
     compile files('libs/jpush-android-3.0.8.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/wechat-sdk-android-with-mta-1.0.2.jar')
 }

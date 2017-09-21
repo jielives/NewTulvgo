@@ -23,5 +23,8 @@
         <item name="android:textColor">@color/color_ffb15a</item>
         <item name="android:textSize">@dimen/text_size_28px</item>
     </style>
-
+    <!--tablayout字体大小样式-->
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/text_size_28px</item>
+    </style>
 </resources>

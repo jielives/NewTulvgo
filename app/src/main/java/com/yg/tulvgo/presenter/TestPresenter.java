@@ -21,7 +21,6 @@ public class TestPresenter extends TestContract.Presenter{
     @Override
     public void getTestInfo() {
         mRxManage.add(mModel.getTestData().subscribe(new RxSubscriber<ResponseBody>(mContext,false) {
-
             @Override
             protected void _onNext(ResponseBody responseBody) {
                 try {

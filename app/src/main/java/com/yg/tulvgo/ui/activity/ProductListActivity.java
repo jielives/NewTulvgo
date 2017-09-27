@@ -1,14 +1,23 @@
 package com.yg.tulvgo.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.view.menu.MenuAdapter;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Handler;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.yg.common.base.BaseActivity;
+import com.yg.common.customview.MultiShapeView;
 import com.yg.common.dropdownmenu.DropDownMenu;
+import com.yg.common.lrecyclerview.SRecyclerView;
+import com.yg.common.statusbar.StatusBarCompat;
 import com.yg.tulvgo.R;
 import com.yg.tulvgo.model.TestModel;
 import com.yg.tulvgo.presenter.TestPresenter;
@@ -22,10 +31,12 @@ import butterknife.BindView;
 
 /**产品列表*/
 public class ProductListActivity extends BaseActivity<TestPresenter,TestModel> {
+    SRecyclerView mRproductList;
     @BindView(R.id.dropDownMenu)
     DropDownMenu mDropDownMenu;
     private String Headers[] = {"目的地","景区门票","智能排序","筛选"};
     private List<View> popupViews = new ArrayList<>();
+    private List<String> list = new ArrayList<>();
     ListView listView1;
     ListView listView2;
     ListView listView3;
@@ -49,10 +60,11 @@ public class ProductListActivity extends BaseActivity<TestPresenter,TestModel> {
     @Override
     protected void initView() {
         super.initView();
-      listView1 = new ListView(ProductListActivity.this);
-      listView2 = new ListView(ProductListActivity.this);
-      listView3 = new ListView(ProductListActivity.this);
-      listView4 = new ListView(ProductListActivity.this);
+        StatusBarCompat.setStatusBarColor(this, Color.BLACK);
+        listView1 = new ListView(ProductListActivity.this);
+        listView2 = new ListView(ProductListActivity.this);
+        listView3 = new ListView(ProductListActivity.this);
+        listView4 = new ListView(ProductListActivity.this);
 
         listView1.setDividerHeight(0);
         listView2.setDividerHeight(0);
@@ -105,14 +117,110 @@ public class ProductListActivity extends BaseActivity<TestPresenter,TestModel> {
                 mDropDownMenu.closeMenu();
             }
         });
-
         View contentView = getLayoutInflater().inflate(R.layout.product_list_content_layout,null);
+        mRproductList = (SRecyclerView) contentView.findViewById(R.id.srv_productlist);
+        mDropDownMenu.setDropDownMenu(Arrays.asList(Headers),popupViews,contentView);
 
-      mDropDownMenu.setDropDownMenu(Arrays.asList(Headers),popupViews,contentView);
+        mRproductList.setLoadListener(new SRecyclerView.LoadListener() {
+            @Override
+            public void refresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshData();
+                        mRproductList.refreshComplete();
+                    }
+                },2000);
+            }
+
+            @Override
+            public void loading() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                       if(list.size() != 30){
+                           loadData();
+                           mRproductList.loadingComplete();
+                       }else {
+                           mRproductList.loadNoMoreData();
+                       }
+                    }
+                },2000);
+            }
+        });
+
+      //item点击事件
+        mRproductList.setItemClickListener(new SRecyclerView.ItemClickListener() {
+            @Override
+            public void click(View v, int position) {
+                Intent i = new Intent(ProductListActivity.this,ScenicSpotDetailsPageActivity.class);
+                startActivity(i);
+            }
+        });
+
+//        mRproductList.setDivider(Color.LTGRAY,3,30,0);
+        mRproductList.setAdapter(new InitAdapter(list,this));
+        mRproductList.startRefresh(true);
+    }
+
+    private void loadData() {
+        for(int i=15; i<30;i++){
+            list.add("数据"+i);
+        }
+        mRproductList.getAdapter().notifyDataSetChanged();
+    }
+
+    private void refreshData() {
+        list.clear();
+        for(int i = 0 ;i < 15 ;i++){
+            list.add("数据"+i);
+        }
+        mRproductList.getAdapter().notifyDataSetChanged();
     }
 
     @Override
     public void initPresenter() {
 
+    }
+
+
+    /**
+     * 原生的适配器
+     */
+    private static class InitAdapter extends RecyclerView.Adapter<InitAdapter.Holder> {
+        private LayoutInflater inflater;
+        private List<String> list;
+
+        InitAdapter(List<String> list, Context context) {
+            this.list = list;
+            inflater = LayoutInflater.from(context);
+        }
+
+        @Override
+        public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v = inflater.inflate(R.layout.item_productlist, parent, false);
+            return new Holder(v);
+        }
+
+        @Override
+        public void onBindViewHolder(Holder holder, int position) {
+            holder.textView.setText(list.get(position));
+            holder.iv.setImageResource(R.drawable.a);
+        }
+
+        @Override
+        public int getItemCount() {
+            return list.size();
+        }
+
+        static class Holder extends RecyclerView.ViewHolder {
+            private TextView textView;
+            private ImageView iv;
+            Holder(View itemView) {
+                super(itemView);
+                textView = (TextView) itemView.findViewById(R.id.tv_item_test);
+                iv = (ImageView) itemView.findViewById(R.id.iv_round);
+            }
+        }
     }
 }

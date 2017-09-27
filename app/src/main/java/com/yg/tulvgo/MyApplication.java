@@ -20,7 +20,7 @@ public class MyApplication extends BaseApplication{
     @Override
     public void onCreate() {
         super.onCreate();
-//        context = getApplicationContext();
+        context = getApplicationContext();
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
 

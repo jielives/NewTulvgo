@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--app:dividerColor="#BEBEBE"
+     app:dividerHeight="0.8dp"
+     app:dividerLeftMargin="10dp"
+     app:dividerRightMargin="0dp"
+    -->
+<com.yg.common.lrecyclerview.SRecyclerView
+    android:id="@+id/srv_productlist"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="内容"
-    android:gravity="center"
-    />
+    android:background="#F0F0F0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </com.yg.common.lrecyclerview.SRecyclerView>
 </LinearLayout>

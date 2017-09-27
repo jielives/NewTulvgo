@@ -27,4 +27,5 @@
     <style name="TabLayoutTextStyle">
         <item name="android:textSize">@dimen/text_size_28px</item>
     </style>
+
 </resources>

@@ -1,10 +1,12 @@
 package com.yg.common.base;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yg.common.network.rx.RxManager;
+import com.yg.common.statusbar.StatusBarCompat;
 import com.yg.common.utils.TUtil;
 import com.yg.common.widget.LoadingDialog;
 
@@ -21,7 +23,7 @@ public abstract class BaseActivity<T extends BasePresenter,E extends BaseModel> 
     public E mModel;
     public Context mContext;
     public RxManager mRxManager;
-    private boolean isConfigChange = false;
+    private boolean isConfigChange = false;//是否横竖屏
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

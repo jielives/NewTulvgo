@@ -1,4 +1,4 @@
-package com.yg.tulvgo.view;
+package com.yg.common.customview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -18,7 +18,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.yg.tulvgo.R;
+import com.yg.common.R;
 
 
 /**
@@ -159,6 +159,7 @@ public class MultiShapeView extends View {
         super(context, attrs, defStyleAttr);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MultiShapeView, defStyleAttr, 0);
+
         mContext = context;
         mBorderColor = typedArray.getColor(R.styleable.MultiShapeView_border_color, DEFAULT_BORDER_COLOR);
         mCoverColor  = typedArray.getColor(R.styleable.MultiShapeView_cover_color, DEFAULT_COVER_COLOR);

@@ -13,6 +13,23 @@
         android:layout_height="190dp"
         android:background="@color/color_ffb15a"
         >
+        <ImageView
+            android:id="@+id/heard"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mehead"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            />
+         <TextView
+             android:layout_marginTop="20dp"
+             android:layout_below="@id/heard"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:text="点击登录"
+             android:textColor="@color/color_ffff"
+             />
     </RelativeLayout>
 
     <LinearLayout

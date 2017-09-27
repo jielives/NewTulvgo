@@ -15,18 +15,33 @@
         android:layout_marginLeft="@dimen/margin_36px"
         android:background="@drawable/shap_roundedrectangle3"
         android:layout_height="35dp">
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="80dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/search_info"
+        <!--<EditText-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:id="@+id/search_info"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="请输入关键字搜索"-->
+            <!--android:background="@color/color_f7f7f7"-->
+            <!--/>-->
+        <com.yg.common.customview.ClearEditText
+            android:layout_marginRight="10dp"
+            android:id="@+id/search"
+            style="?android:attr/textViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="请输入关键字搜索"
-            android:background="@color/color_f7f7f7"
-            />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="9"
+            android:background="@null"
+            android:hint="请输入预案名称"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:textColorHint="@color/color_9999"
+            android:textCursorDrawable="@null" />
         <ImageView
-            android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/margin_36px"

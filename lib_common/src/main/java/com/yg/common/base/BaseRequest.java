@@ -1,7 +1,10 @@
 package com.yg.common.base;
 
-
-public class RequestBean<T>  {
+/**
+ * Created by shenjie on 2017/9/22.
+ * 客户端请求服务器Bean基类
+ */
+public class BaseRequest<T>  {
     private T data;
 
     public T getData() {

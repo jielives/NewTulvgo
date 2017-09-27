@@ -38,7 +38,6 @@ public class RxBus {
 
     /**
      * 订阅事件源
-     *
      * @param mObservable
      * @param mAction1
      * @return
@@ -55,7 +54,6 @@ public class RxBus {
 
     /**
      * 注册事件源
-     *
      * @param tag
      * @return
      */
@@ -82,7 +80,6 @@ public class RxBus {
 
     /**
      * 取消监听
-     *
      * @param tag
      * @param observable
      * @return

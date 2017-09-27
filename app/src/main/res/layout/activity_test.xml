@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     >
 <TextView
+    android:id="@+id/test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="dddddd"
+    android:text="测试"
     android:gravity="center"
     />
 </LinearLayout>

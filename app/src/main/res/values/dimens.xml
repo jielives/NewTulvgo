@@ -5,13 +5,20 @@
     <dimen name="margin_30px">15dp</dimen>
     <dimen name="margin_19px">9.5dp</dimen>
     <dimen name="margin_36px">18dp</dimen>
+    <dimen name="margin_18px">9dp</dimen>
+    <dimen name="margin_22px">11dp</dimen>
+    <dimen name="margin_37px">18.5dp</dimen>
     <!--padding-->
     <dimen name="padding_30px">10dp</dimen>
     <!--textsize-->
     <dimen name="text_size_24px">12sp</dimen>
     <dimen name="text_size_22px">11sp</dimen>
     <dimen name="text_size_28px">13sp</dimen>
+    <dimen name="text_size_36px">15sp</dimen>
+    <dimen name="text_size_20px">10sp</dimen>
     <!--layout_height98px-->
     <dimen name="layout_height98px">49dp</dimen>
     <dimen name="layout_height88px">46dp</dimen>
+    <dimen name="layout_height80px">40dp</dimen>
+    <dimen name="layout_height210px">105dp</dimen>
 </resources>

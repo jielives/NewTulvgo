@@ -13,4 +13,41 @@
         <attr name="ddmenuUnselectedIcon" format="reference"/>
         <attr name="ddmenuMenuHeightPercent" format="float"/>
     </declare-styleable>
+
+    <declare-styleable name="SRecyclerView">
+    <attr name="dividerColor" format="color"/>
+    <attr name="dividerHeight" format="dimension"/>
+    <attr name="dividerLeftMargin" format="dimension"/>
+    <attr name="dividerRightMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultiShapeView">
+        <attr name="shape1" format="enum">
+            <enum name="rect" value="1"/>
+            <enum name="circle" value="2"/>
+        </attr>
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="cover_color" format="color" />
+        <attr name="round_radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScrollViewTabIndicator">
+        <attr name="tpi_tabPadding" format="reference|dimension"/>
+        <attr name="tpi_indicatorColor" format="reference|color"/>
+        <attr name="tpi_indicatorHeight" format="reference|dimension"/>
+        <attr name="tpi_underLineColor" format="reference|color"/>
+        <attr name="tpi_underLineHeight" format="reference|dimension"/>
+        <attr name="tpi_indicatorMode" format="integer">
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+        <attr name="android:textAppearance"/>
+        <attr name="tpi_tabBackground" format="reference"/>
+        <attr name="tpi_mode" format="integer">
+            <enum name="scroll" value="0x00000000"/>
+            <enum name="fixed" value="0x00000001"/>
+        </attr>
+    </declare-styleable>
+
 </resources>
